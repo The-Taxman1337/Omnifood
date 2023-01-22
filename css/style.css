@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap");
 
 /* 
 --- 01 Typography
@@ -18,7 +18,7 @@ TINTS:
 #fdf2e9
 
 SHADES:
-
+#cf711f
 
  Font Weights:
 
@@ -119,4 +119,33 @@ h1 {
 
 .hero-img {
   width: 100%;
+}
+
+.delievered-meals {
+  display: flex;
+  margin-top: 8rem;
+  gap: 1.6rem;
+  align-items: center;
+}
+
+.delievered-imgs img {
+  height: 4.8rem;
+  width: 4.8rem;
+  border-radius: 50%;
+  margin-right: -1.6rem;
+  border: 3px solid #fdf2e9;
+}
+
+.delievered-imgs img:last-child {
+  margin: 0;
+}
+
+.delievered-text {
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+.delievered-text span {
+  color: #cf711f;
+  font-weight: 700;
 }
