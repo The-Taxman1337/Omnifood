@@ -273,6 +273,37 @@ h1 {
 }
 
 /********************************/
+/* AS FEATURED IN SECTION */
+/********************************/
+
+.section-featured {
+  padding: 4.8rem 0 3.2rem 0;
+  /* background-color: #f8f9fa; */
+}
+
+.logos {
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo-img {
+  height: 3.2rem;
+  /* using filter to remove the color of the images */
+  filter: brightness(0);
+  opacity: 50%;
+}
+.heading-featured-in {
+  font-size: 1.6rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  /* Centering the text */
+  text-align: center;
+  margin-bottom: 2.4rem;
+  color: #999;
+}
+
+/********************************/
 /* HOW IT WORKS SECTION */
 /********************************/
 .section-how {
