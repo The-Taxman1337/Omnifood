@@ -386,6 +386,16 @@ h1 {
   box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.075);
   border-radius: 11px;
   overflow: hidden;
+  /* necessary for hovering card effect */
+  transition: all 0.4s;
+  /* for increase in shadows height */
+  box-shadow: 0 3.2rem 6.4rem rgba(0, 0, 0, 0.06);
+}
+
+/* Hovering effect on the cards */
+.meal:hover {
+  /* - for going up */
+  transform: translateY(-1.2rem);
 }
 
 .meal-title {
@@ -447,4 +457,34 @@ h1 {
 
 .meal-content {
   padding: 3.2rem 4.8rem 4.8rem 4.8rem;
+}
+
+.list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+
+.list-icon {
+  height: 3rem;
+  width: 3rem;
+}
+
+.list-item {
+  display: flex;
+  gap: 1.6rem;
+  align-items: center;
+  font-size: 1.8rem;
+}
+
+/* for personal taste */
+.diets h3 {
+  font-size: 3.6rem;
+  margin-bottom: 2.4rem;
+}
+
+.all-recipies {
+  text-align: center;
+  font-size: 1.8rem;
 }
