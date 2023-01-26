@@ -157,6 +157,10 @@ h1 {
   margin-bottom: 4.8rem !important;
 }
 
+.margin-bottom-lg {
+  margin-bottom: 9.6rem !important;
+}
+
 /********************************/
 /* RESUABLE GRID  */
 /********************************/
@@ -166,6 +170,10 @@ h1 {
   column-gap: 6.4rem;
 
   /* grid-template-columns: repeat(4, 1fr); */
+}
+
+grid:not(:last-child) {
+  margin-bottom: 9.6rem;
 }
 
 .grid--2--cols {
@@ -186,4 +194,24 @@ h1 {
 
 strong {
   font-weight: 500;
+  color: #555;
+}
+
+.list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+
+.list-icon {
+  height: 3rem;
+  width: 3rem;
+}
+
+.list-item {
+  display: flex;
+  gap: 1.6rem;
+  align-items: center;
+  font-size: 1.8rem;
 }
