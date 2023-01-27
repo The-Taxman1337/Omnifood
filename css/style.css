@@ -616,6 +616,12 @@ h1 {
 /* CTA SECTION */
 /********************************/
 
+*:focus {
+  outline: none;
+
+  box-shadow: 0 0 0 0.8rem rgba(230, 126, 34, 0.5);
+}
+
 .cta {
   display: grid;
   grid-template-columns: 2fr 1fr;
@@ -624,10 +630,34 @@ h1 {
   box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.15);
   border-radius: 1rem;
   overflow: hidden;
-
-  /* temp */
-  height: 50rem;
   margin-bottom: 2.4rem;
+}
+
+.cta *:focus {
+  outline: none;
+
+  box-shadow: 0 0 0 0.8rem rgba(253, 242, 233, 0.5);
+}
+
+.cta-text-box {
+  color: #2e1907;
+  /* align-items: center; */
+  padding: 6.4rem 4.8rem 6.4rem 6.4rem;
+}
+
+.cta .heading-secondary {
+  text-align: center;
+  color: #2e1907;
+  margin: 0 0 3.2rem -3.4rem;
+}
+
+.cta-text {
+  font-size: 1.8rem;
+  line-height: 1.8rem;
+  text-align: center;
+  font-weight: 400;
+  color: #45260a;
+  margin-bottom: 4.8rem;
 }
 
 .cta-img-box {
@@ -639,4 +669,57 @@ h1 {
     url("../img/eating.jpg");
   background-size: cover;
   background-position: center;
+}
+
+.cta-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 3.2rem;
+  row-gap: 2.4rem;
+  margin-left: 1.6rem;
+}
+
+.cta-input {
+  display: flex;
+  flex-direction: column;
+}
+
+.cta-form label {
+  display: block;
+  font-size: 1.6rem;
+  font-weight: 500;
+  margin-bottom: 0.8rem;
+}
+
+.cta-form input,
+.cta-form select {
+  width: 100%;
+  padding: 1.2rem;
+  font-size: 1.6rem;
+  color: inherit;
+  font-family: inherit;
+  border: none;
+  background-color: #fdf2e9;
+  border-radius: 0.9rem;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.cta-form input::placeholder {
+  color: #999;
+}
+
+.btn--form {
+  width: 100%;
+  padding: 1.2rem;
+  border: none;
+  align-self: flex-end;
+  cursor: pointer;
+  background-color: #45260a;
+  color: #fdf2e9;
+  font-family: inherit;
+}
+
+.btn--form:hover {
+  background-color: #fff;
+  color: #555;
 }
