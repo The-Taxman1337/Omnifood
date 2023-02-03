@@ -11,6 +11,14 @@ html {
   /* font-size: 10px; */
   /* rem will now be 10 px and not 16px */
   font-size: 62.5%;
+
+  /* for the hidden column */
+  overflow-x: hidden;
+}
+
+body {
+  /* only works if there is nothing absolutely relationed  */
+  overflow-x: hidden;
 }
 
 h1 {
@@ -134,6 +142,7 @@ h1 {
   /* we want it to be sticky later */
   height: 9.6rem;
   padding: 0 4.8rem;
+  position: relative;
 }
 
 .logo {
@@ -149,7 +158,7 @@ h1 {
   /* elements should be side by side  */
   display: flex;
   align-items: center;
-  gap: 3.2rem;
+  gap: 4.8rem;
 }
 
 .main-nav-link:link,
@@ -183,6 +192,25 @@ h1 {
   background-color: #cf711f;
 }
 
+/* MOBILE */
+
+.btn-mobile-nav {
+  border: none;
+  background: none;
+  cursor: pointer;
+  display: none;
+}
+
+.icon-mobile-nav {
+  height: 4.8rem;
+  width: 4.8rem;
+  stroke: #333;
+}
+
+.close-btn {
+  display: none;
+}
+
 /********************************/
 /* HERO SECTION */
 /********************************/
@@ -200,7 +228,7 @@ h1 {
   margin: 0 auto;
   gap: 9.6rem;
   align-items: center;
-  padding-left: 3.2rem;
+  padding: 0 3.2rem;
 }
 
 .hero-description {
