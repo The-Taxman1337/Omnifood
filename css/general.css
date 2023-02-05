@@ -52,6 +52,9 @@ html {
   /* font-size: 10px; */
   /* rem will now be 10 px and not 16px */
   font-size: 62.5%;
+
+  /* does not work on Safari web browser */
+  /* scroll-behavior: smooth; */
 }
 
 h1 {

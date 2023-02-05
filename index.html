@@ -3,26 +3,31 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="description" content="Omnifood is an AI powered food subscription that will make you eat healthy again,365 days per year.It's tailored to your personal tastes and nutritional needs">
     <!-- important for responsive web design -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Omnifood</title>
+    <script defer src="/js/script.js"></script>
+    <title>Omnifood &mdash; Never cook again! </title>
+    <link rel="icon" href="/img/favicon_fav.png">
+    <link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
+    <link rel="manifest" href="manifest.webmanifest">
     <link rel="stylesheet" href="/css/general.css">
     <link rel="stylesheet" href="/css/style.css" />
     <link rel="stylesheet" href="/css/queries.css">
   </head>
   <body>
     
-    <header class="header nav-open">
+    <header class="header">
       <a href="#">
         <img class="logo" alt="Omnifood Logo" src="/img/omnifood-logo.png">
       </a>
       <nav class="main-nav">
         <ul class="main-nav-list">
-          <li><a href="#" class="main-nav-link">How it works</a></li>
-          <li><a href="#" class="main-nav-link">Meals</a></li>
-          <li><a href="#" class="main-nav-link">Testimonials</a></li>
-          <li><a href="#" class="main-nav-link">Pricing</a></li>
-          <li><a href="#" class="main-nav-link nav-cta">Try for free</a></li>
+          <li><a href="#how" class="main-nav-link">How it works</a></li>
+          <li><a href="#meals" class="main-nav-link">Meals</a></li>
+          <li><a href="#testimonials" class="main-nav-link">Testimonials</a></li>
+          <li><a href="#pricing" class="main-nav-link">Pricing</a></li>
+          <li><a href="#cta" class="main-nav-link nav-cta">Try for free</a></li>
         </ul>
       </nav>
 
@@ -49,10 +54,10 @@
             needs.
           </p>
 
-          <a href="#" class="btn btn--full margin-right-sm"
+          <a href="#cta" class="btn btn--full margin-right-sm"
             >Start eating well</a
           >
-          <a href="#" class="btn btn--outline">Learn more &darr; </a>
+          <a href="#how" class="btn btn--outline">Learn more &darr; </a>
           <div class="delievered-meals">
             <div class="delievered-imgs">
               <img src="/img/customers/customer-1.jpg" alt="Customer Picture" />
@@ -74,7 +79,15 @@
         </div>
         <!-- DO NOT CHANGE THE HERO IMAGE FROM THIS POSITION -->
         <div class="hero-img-box">
-          <img src="/img/hero.png" alt="hero picture" class="hero-img" />
+          <picture>
+            <source srcset="/img/hero.webp" type="image/webp">
+            <source srcset="/img/hero.png" type="image/png">
+
+            <img src="/img/hero.png" alt="hero picture" class="hero-img" />
+          </picture>
+
+
+          
       </div>
     </section>
 
@@ -90,7 +103,7 @@
         </div>
       </div>
     </section>
-    <section class="section-how">
+    <section class="section-how" id="how">
       <div class="container">
         <span class="subheading">How it works</span>
         <h2 class="heading-secondary">Your daily dose of health in 3 simple steps</h2>
@@ -132,7 +145,7 @@
         </div>         
       </div>
       
-      <section class="section-meals">
+      <section class="section-meals" id="meals">
         <div class="container">
           <span class="subheading">Meals</span>
           <h2 class="heading-secondary">Omnifood AI chooses from 5,000+ recipes</h2>
@@ -241,7 +254,7 @@
         </div>
       </section>
     </section>
-    <section class="section-testimonials">
+    <section class="section-testimonials" id="testimonials">
       <div class="testimonials-container">
       <!-- Heading and Subheading -->
       <span class="subheading">Testimonials</span>
@@ -321,7 +334,7 @@
         </figure>
     </section>
 
-    <section class="section-pricing ">
+    <section class="section-pricing " id="pricing">
       <div class="container">
         <span class="subheading">Pricing</span>
         <h2 class="heading-secondary">Eat well without breaking the bank</h2>
@@ -464,30 +477,30 @@
     </section>
 
     <!-- Call to Action Section -->
-  <section class="section-cta margin-bottom-lg">
+  <section class="section-cta margin-bottom-lg" id="cta">
     <div class="container">
       <div class="cta">
       <div class="cta-text-box">
         <h2 class="heading-secondary">Get your first meal for free !</h2>
         <p class="cta-text">Healthy, tasty and hassle-free meals are waiting for you. Start eating well today. You can cancel or pause anytime. And the first meal is on us!</p>
 
-        <form class="cta-form" action="#">
+        <form class="cta-form" action="#" name="sign-up" netlify>
           <div class="cta-input">
 
             <label for="full-name">Full Name</label>
-            <input id='full name' type="text" placeholder="Adityaa Tikoo" required>
+            <input id='full name' type="text" placeholder="Adityaa Tikoo" name='full-name' required>
           </div>
 
           <div class="cta-input">
 
             <label for="email">Email Address</label>
-            <input id="email" type="email" placeholder="me@example.com" required>
+            <input id="email" type="email" placeholder="me@example.com" name="email" required>
           </div>
 
           <div class="cta-option">
 
             <label for="select-where">Where did you hear from us</label>
-            <select id="select-where" required>
+            <select id="select-where" name= 'select-where' required>
               <option value="">Please choose one option:</option>
               <option value="friends">Friends and family</option>
               <option value="youtube">Youtube Video</option>
@@ -523,7 +536,7 @@
           <li><a href="#"><?xml version="1.0"?><svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 30 30" width="24px" height="24px" >    <path d="M28,6.937c-0.957,0.425-1.985,0.711-3.064,0.84c1.102-0.66,1.947-1.705,2.345-2.951c-1.03,0.611-2.172,1.055-3.388,1.295 c-0.973-1.037-2.359-1.685-3.893-1.685c-2.946,0-5.334,2.389-5.334,5.334c0,0.418,0.048,0.826,0.138,1.215 c-4.433-0.222-8.363-2.346-10.995-5.574C3.351,6.199,3.088,7.115,3.088,8.094c0,1.85,0.941,3.483,2.372,4.439 c-0.874-0.028-1.697-0.268-2.416-0.667c0,0.023,0,0.044,0,0.067c0,2.585,1.838,4.741,4.279,5.23 c-0.447,0.122-0.919,0.187-1.406,0.187c-0.343,0-0.678-0.034-1.003-0.095c0.679,2.119,2.649,3.662,4.983,3.705 c-1.825,1.431-4.125,2.284-6.625,2.284c-0.43,0-0.855-0.025-1.273-0.075c2.361,1.513,5.164,2.396,8.177,2.396 c9.812,0,15.176-8.128,15.176-15.177c0-0.231-0.005-0.461-0.015-0.69C26.38,8.945,27.285,8.006,28,6.937z"/></svg></a></li>
         </ul>
 
-        <p class="copyright">Copyright &copy; 2023 by Omnifood, Inc. All rights reserved</p>
+        <p class="copyright">Copyright &copy; <span class="year">2023</span> by Omnifood, Inc. All rights reserved</p>
       </div>
       <div class="address-coln">
         <p class="footer-heading">Contact us</p>
@@ -573,6 +586,7 @@
       </nav>
     </div>
   </footer>
+  
   </body>
 </html>
 
